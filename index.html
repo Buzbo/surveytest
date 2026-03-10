@@ -1,300 +1,489 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buzbo — Hired for who you are</title>
-  <meta name="description" content="Buzbo matched je op wie je écht bent. Niet op je CV. Stop met solliciteren in het vide — laat de juiste manager jou vinden." />
-  <meta property="og:title" content="Buzbo — Hired for who you are" />
-  <meta property="og:description" content="People deserve to be hired for who they are, not just what they've done." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buzbo — Tell us who you are</title>
+    <meta name="description" content="Complete your Buzbo profile and get matched with the right manager." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="survey.css" />
 </head>
+
 <body>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <div class="logo-mark">b</div>
-        <span class="logo-text">Buzbo</span>
-      </a>
-      <div class="nav-right">
-        <a href="#manifesto" class="nav-link">Manifesto</a>
-        <a href="#how" class="nav-link">Hoe het werkt</a>
-        <a href="#waitlist" class="nav-cta-btn">Word lid →</a>
-      </div>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#manifesto" class="mobile-link" onclick="closeMobile()">Manifesto</a>
-    <a href="#how" class="mobile-link" onclick="closeMobile()">Hoe het werkt</a>
-    <a href="#waitlist" class="mobile-link mobile-cta" onclick="closeMobile()">Word lid →</a>
-  </div>
-
-  <!-- SECTION 1: HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-orb orb-1"></div>
-    <div class="hero-bg-orb orb-2"></div>
-
-    <div class="hero-inner">
-      <div class="hero-tag">
-        <span class="tag-dot"></span>
-        Hiring, opnieuw uitgevonden
-      </div>
-
-      <h1 class="hero-headline">
-        Je CV vertelt<br />
-        <em>wat</em> je deed.<br />
-        Buzbo laat zien<br />
-        <em>wie</em> je bent.
-      </h1>
-
-      <p class="hero-sub">
-        Stop met solliciteren in het vide. Laat de juiste manager jou vinden —
-        op basis van wie je écht bent.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#waitlist" class="btn-primary">Claim je plek →</a>
-        <span class="hero-social-proof">
-          <span class="avatars">
-            <span class="av av1">J</span>
-            <span class="av av2">M</span>
-            <span class="av av3">S</span>
-          </span>
-          <span>2.400+ mensen gaan je voor</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="hero-scroll-hint">
-      <div class="scroll-line"></div>
-      <span>scroll</span>
-    </div>
-  </section>
-
-  <!-- SECTION 2: STAT BANNER -->
-  <section class="stat-banner">
-    <div class="stat-banner-inner">
-      <div class="stat-item">
-        <span class="stat-number">89%</span>
-        <span class="stat-label">van slechte hires door soft skills mismatch</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number">72%</span>
-        <span class="stat-label">van professionals voelt zich verkeerd beoordeeld</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number">1 op 3</span>
-        <span class="stat-label">ideale kandidaten worden weggefiltered door ATS</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: MANIFESTO -->
-  <section class="manifesto" id="manifesto">
-    <div class="manifesto-inner">
-      <div class="manifesto-label">✦ Manifest</div>
-      <div class="manifesto-lines">
-        <p class="manifesto-line" data-delay="0">HR filtert op keywords.</p>
-        <p class="manifesto-line" data-delay="100">Managers huren op cultuur.</p>
-        <p class="manifesto-line" data-delay="200">Niemand verbindt de twee.</p>
-        <p class="manifesto-line manifesto-line--accent" data-delay="350">Tot nu.</p>
-      </div>
-      <p class="manifesto-body">
-        Buzbo is gebouwd voor mensen die moe zijn van het schrijven van
-        motivatiebrieven voor banen waar ze perfect voor zijn — maar toch
-        door een algoritme worden buitengesloten. Je passie verdient een
-        betere match.
-      </p>
-    </div>
-  </section>
-
-  <!-- SECTION 4: HOW IT WORKS -->
-  <section class="how" id="how">
-    <div class="how-inner">
-      <div class="how-label">Hoe het werkt</div>
-      <h2 class="how-headline">Drie stappen.<br />Eén match.</h2>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-content">
-            <h3 class="step-title">Bouw je profiel</h3>
-            <p class="step-body">
-              Geen saai CV. Jij vertelt wie je bent: je waarden, je
-              werkstijl, wat jou drijft. Authentiek en eerlijk.
-            </p>
-          </div>
+    <!-- NAV -->
+    <nav class="snav">
+        <div class="snav-inner">
+            <a href="index.html" class="snav-logo">
+                <div class="logo-mark">b</div>
+                <span class="logo-text">Buzbo</span>
+            </a>
+            <div class="snav-progress-wrap">
+                <div class="snav-step-label" id="stepLabel">01 / 15</div>
+                <div class="snav-bar">
+                    <div class="snav-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
         </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-content">
-            <h3 class="step-title">Buzbo matcht</h3>
-            <p class="step-body">
-              Ons algoritme koppelt jou aan managers die zoeken
-              naar precies wie jij bent — niet wat je ooit op papier
-              hebt gezet.
-            </p>
-          </div>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-content">
-            <h3 class="step-title">Maak verbinding</h3>
-            <p class="step-body">
-              De manager neemt contact op. Jij beslist. Direct,
-              menselijk en zonder inbox-chaos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- SECTION 5: BRAND VOICE SPLIT -->
-  <section class="voice-split">
-    <div class="voice-left">
-      <p class="voice-quote">
-        "Stop performing.<br />
-        <strong>Start connecting.</strong>"
-      </p>
-      <div class="voice-tags">
-        <span class="voice-tag">Direct</span>
-        <span class="voice-tag">Menselijk</span>
-        <span class="voice-tag">Zelfverzekerd</span>
-        <span class="voice-tag">Empowerend</span>
-      </div>
-    </div>
-    <div class="voice-right">
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "Ik had 47 afwijzingen in 6 maanden. Buzbo zorgde dat een manager mij
-          benaderde binnen een week — voor een rol ik niet eens had durven
-          solliciteren."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-av">L</div>
-          <div>
-            <div class="author-name">Lotte V.</div>
-            <div class="author-title">UX Designer · Amsterdam</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          "Eindelijk een platform dat begrijpt dat ik meer ben dan mijn
-          werkervaring. Buzbo toonde wie ik écht ben."
-        </p>
-        <div class="testimonial-author">
-          <div class="author-av">R</div>
-          <div>
-            <div class="author-name">Remi K.</div>
-            <div class="author-title">Product Lead · Rotterdam</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- SURVEY CONTAINER -->
+    <main class="survey-main">
+        <div class="survey-wrap" id="surveyWrap">
 
-  <!-- SECTION 6: WAITLIST FORM -->
-  <section class="waitlist" id="waitlist">
-    <div class="waitlist-inner">
-      <div class="waitlist-left">
-        <div class="waitlist-label">✦ Vroege toegang</div>
-        <h2 class="waitlist-headline">
-          De baan<br />vond jou.<br />
-          <em>Niet andersom.</em>
-        </h2>
-        <p class="waitlist-sub">
-          Wees er als eerste bij. Buzbo lanceert binnenkort — en de eerste
-          leden bepalen mee hoe het platform eruitziet.
-        </p>
-        <div class="waitlist-perks">
-          <div class="perk">
-            <span class="perk-icon">✓</span>
-            <span>Gratis voor professionals, altijd</span>
-          </div>
-          <div class="perk">
-            <span class="perk-icon">✓</span>
-            <span>Geen motivatiebrieven meer</span>
-          </div>
-          <div class="perk">
-            <span class="perk-icon">✓</span>
-            <span>Jij bepaalt wat je deelt</span>
-          </div>
-          <div class="perk">
-            <span class="perk-icon">✓</span>
-            <span>Early members shapen het product</span>
-          </div>
-        </div>
-      </div>
+            <!-- ── STEP 0: WELCOME ─────────────────────────── -->
+            <div class="step active" data-step="0">
+                <div class="step-intro">
+                    <div class="step-tag">✦ 3 minutes</div>
+                    <h1 class="step-headline">The smart new way<br />to showcase yourself<br />as a
+                        <em>professional.</em>
+                    </h1>
+                    <p class="step-sub">Present yourself authentically — with your passions and key strengths. You are
+                        in control and decide if a business manager gets to see your profile.</p>
+                    <button class="btn-next btn-primary-lg" onclick="goNext()">Get started →</button>
+                </div>
+            </div>
 
-      <div class="waitlist-right">
-        <div class="form-card">
-          <div class="form-card-header">
-            <div class="form-card-tag">Claim je plek</div>
-            <p class="form-card-sub">Vul je gegevens in en we nemen contact met je op</p>
-          </div>
-          <!-- Feathery Form -->
-          <div id="feathery-container"></div>
-          <p class="form-privacy">
-            🔒 Je gegevens worden nooit gedeeld met derden.
-          </p>
+            <!-- ── STEP 1: WHO ARE YOU ─────────────────────── -->
+            <div class="step" data-step="1">
+                <div class="step-label-tag">Let's start</div>
+                <h2 class="step-headline">Let's start with some<br />more information<br />about <em>you</em></h2>
+                <p class="step-desc">You are in control &amp; decide first if the business manager gets to see your
+                    profile!</p>
+
+                <div class="field-group">
+                    <label class="field-label">My name is <span class="req">*</span></label>
+                    <input type="text" id="f_name" class="field-input" placeholder="Full name" />
+                </div>
+                <div class="field-group">
+                    <label class="field-label">My gender identity is <span class="req">*</span></label>
+                    <div class="pill-group" id="f_gender">
+                        <button class="pill" data-val="Male">Male</button>
+                        <button class="pill" data-val="Female">Female</button>
+                        <button class="pill" data-val="Non-binary">Non-binary</button>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label class="field-label">My age is <span class="opt">(optional)</span></label>
+                    <input type="number" id="f_age" class="field-input field-input--sm" placeholder="e.g. 28" min="16"
+                        max="80" />
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-next btn-primary" onclick="goNext()">Let's go! →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 2: WORK TYPE ───────────────────────── -->
+            <div class="step" data-step="2">
+                <div class="step-label-tag">Basics are set!</div>
+                <h2 class="step-headline">What type of work<br />are you open for? <span class="step-multi">Choose more
+                        if you like!</span></h2>
+
+                <div class="card-group" id="f_worktype">
+                    <button class="card-btn" data-val="Entrepreneurship">Entrepreneurship</button>
+                    <button class="card-btn" data-val="Freelance">Freelance</button>
+                    <button class="card-btn" data-val="New job challenge">New job challenge</button>
+                    <button class="card-btn" data-val="Internship">Internship</button>
+                    <button class="card-btn" data-val="Don't know yet">Don't know yet</button>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 3: HOURS ───────────────────────────── -->
+            <div class="step" data-step="3">
+                <h2 class="step-headline">How many hours? <span class="step-multi">Choose more if you are still not
+                        sure</span></h2>
+
+                <div class="card-group" id="f_hours">
+                    <button class="card-btn" data-val="Fulltime">Fulltime</button>
+                    <button class="card-btn" data-val="Parttime">Parttime</button>
+                    <button class="card-btn" data-val="Evening/weekends">Evening/weekends</button>
+                    <button class="card-btn" data-val="Flexible">Flexible</button>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 4: TIMEFRAME ───────────────────────── -->
+            <div class="step" data-step="4">
+                <h2 class="step-headline">In what timeframe<br />are you available?</h2>
+
+                <div class="card-group card-group--single" id="f_timeframe">
+                    <button class="card-btn" data-val="Per direct">Per direct</button>
+                    <button class="card-btn" data-val="In collaboration">In collaboration</button>
+                    <button class="card-btn" data-val="Flexible">Flexible</button>
+                    <button class="card-btn card-btn--months" data-val="In X months">In X months</button>
+                </div>
+
+                <!-- Conditional: months input -->
+                <div class="conditional-field" id="months-field" style="display:none">
+                    <label class="field-label">How many months from now?</label>
+                    <input type="number" id="f_months" class="field-input field-input--sm" placeholder="e.g. 3" min="1"
+                        max="24" />
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 5: COUNTRY ─────────────────────────── -->
+            <div class="step" data-step="5">
+                <h2 class="step-headline">Where would you like<br />your primary<br /><em>workplace to be?</em></h2>
+
+                <div class="field-group">
+                    <select id="f_country_select" class="field-input field-select">
+                        <option value="" disabled selected>Country</option>
+                        <option>Netherlands</option>
+                        <option>Belgium</option>
+                        <option>France</option>
+                        <option>Germany</option>
+                        <option>Italy</option>
+                        <option>Spain</option>
+                        <option>United Kingdom</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 6: CITY + DISTANCE ─────────────────── -->
+            <div class="step" data-step="6">
+                <h2 class="step-headline">Which city or area<br />do you prefer? <span
+                        class="opt-label">(optional)</span></h2>
+
+                <div class="field-group">
+                    <input type="text" id="f_city" class="field-input" placeholder="e.g. Amsterdam" />
+                </div>
+
+                <div class="field-group" style="margin-top: 32px;">
+                    <label class="field-label">Distance from this location</label>
+                    <div class="slider-wrap">
+                        <input type="range" id="f_distance" class="slider" min="0" max="100" value="25" />
+                        <div class="slider-labels">
+                            <span>0 km</span>
+                            <span class="slider-val" id="distanceVal">25 km</span>
+                            <span>100 km</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                    <button class="btn-skip" onclick="skipStep()">Skip this step</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 7: WAY OF WORKING ──────────────────── -->
+            <div class="step" data-step="7">
+                <h2 class="step-headline">How do you prefer<br />to work?</h2>
+
+                <div class="card-group card-group--single" id="f_workstyle">
+                    <button class="card-btn" data-val="Remote">Remote</button>
+                    <button class="card-btn" data-val="In the office">In the office</button>
+                    <button class="card-btn" data-val="On the road">On the road</button>
+                    <button class="card-btn card-btn--hybrid" data-val="Hybrid">Hybrid</button>
+                </div>
+
+                <!-- Conditional: hybrid favorite location -->
+                <div class="conditional-field" id="hybrid-field" style="display:none">
+                    <label class="field-label">Hybrid setups are great! What is your favorite work location?</label>
+                    <div class="pill-group" id="f_hybrid">
+                        <button class="pill" data-val="Remote">Remote</button>
+                        <button class="pill" data-val="In the Office">In the Office</button>
+                        <button class="pill" data-val="On the Road">On the Road</button>
+                    </div>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 8: LANGUAGES ───────────────────────── -->
+            <div class="step" data-step="8">
+                <h2 class="step-headline">Which languages<br />can you work in? <span class="step-multi">Choose more if
+                        you like!</span></h2>
+
+                <div class="card-group" id="f_languages">
+                    <button class="card-btn" data-val="Dutch">🇳🇱 Dutch</button>
+                    <button class="card-btn" data-val="English">🇬🇧 English</button>
+                    <button class="card-btn" data-val="French">🇫🇷 French</button>
+                    <button class="card-btn" data-val="German">🇩🇪 German</button>
+                    <button class="card-btn" data-val="Spanish">🇪🇸 Spanish</button>
+                    <button class="card-btn" data-val="Italian">🇮🇹 Italian</button>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 9: TRANSITION ──────────────────────── -->
+            <div class="step" data-step="9">
+                <div class="transition-screen">
+                    <div class="transition-icon">✦</div>
+                    <h2 class="step-headline transition-headline">Great!</h2>
+                    <p class="transition-body">Professionals are matched with business managers based on passions —
+                        without any pressure to match or change jobs.</p>
+                    <p class="transition-body transition-body--accent">Now we deepdive in the important part;
+                        <strong>your passion.</strong>
+                    </p>
+                </div>
+                <div class="step-nav step-nav--centered">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next.. →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 10: PASSION ────────────────────────── -->
+            <div class="step" data-step="10">
+                <h2 class="step-headline">What is your<br /><em>real passion?</em></h2>
+                <p class="step-desc">A passion is something that energizes you and makes you excited to do it every day!
+                </p>
+                <p class="step-desc">It can be a hobby like healthy cooking, acrylic painting, or football, or a
+                    specific interest like technology, travel, or nature.</p>
+
+                <div class="field-group passion-field-wrap">
+                    <input type="text" id="f_passion" class="field-input" placeholder="Describe your passion..." />
+                    <button class="tips-btn" id="tipsBtn" onclick="openTips()">💡 Tips</button>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Yes, this is my passion! →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 11: COMPANY GOAL ───────────────────── -->
+            <div class="step" data-step="11">
+                <h2 class="step-headline">Which company goal<br />do you want to be part of?</h2>
+
+                <div class="goal-grid" id="f_goal">
+                    <button class="goal-btn" data-val="Revenue growth purpose">
+                        <span class="goal-name">📈 Revenue growth purpose</span>
+                        <span class="goal-desc">I'm at my best when revenue is the primary focus</span>
+                    </button>
+                    <button class="goal-btn" data-val="Internationalisation growth">
+                        <span class="goal-name">🌍 Internationalisation growth</span>
+                        <span class="goal-desc">Different cultures, people and needs — I'm up for that!</span>
+                    </button>
+                    <button class="goal-btn" data-val="Cost saving mindset">
+                        <span class="goal-name">💰 Cost saving mindset</span>
+                        <span class="goal-desc">I love finding ways to save costs</span>
+                    </button>
+                    <button class="goal-btn" data-val="Social impact">
+                        <span class="goal-name">🤲 Social impact</span>
+                        <span class="goal-desc">Making a positive social impact is a key motivator for me</span>
+                    </button>
+                    <button class="goal-btn" data-val="Sustainable goals">
+                        <span class="goal-name">🌱 Sustainable goals</span>
+                        <span class="goal-desc">Sustainability is a priority — I want to ensure a better future</span>
+                    </button>
+                    <button class="goal-btn" data-val="Customer focus">
+                        <span class="goal-name">⭐ Customer focus</span>
+                        <span class="goal-desc">Passionate about delivering exceptional customer experiences</span>
+                    </button>
+                    <button class="goal-btn" data-val="Innovation">
+                        <span class="goal-name">💡 Innovation</span>
+                        <span class="goal-desc">I want to be part of the first innovations of the world</span>
+                    </button>
+                    <button class="goal-btn" data-val="Team led">
+                        <span class="goal-name">🤝 Team led</span>
+                        <span class="goal-desc">I value people, my team and collaboration</span>
+                    </button>
+                    <button class="goal-btn" data-val="Regulation">
+                        <span class="goal-name">⚖️ Regulation</span>
+                        <span class="goal-desc">I'm dedicated to make sure that everything is within the rules</span>
+                    </button>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 12: MARKET / EXPERTISE ────────────── -->
+            <div class="step" data-step="12">
+                <h2 class="step-headline">What market is most<br />interesting for you to work in? <span
+                        class="step-multi">Choose as many as you prefer</span></h2>
+
+                <div class="card-group" id="f_market">
+                    <button class="card-btn" data-val="Sales">💼 Sales</button>
+                    <button class="card-btn" data-val="Project Management">📋 Project Management</button>
+                    <button class="card-btn" data-val="Strategic Thinking">🎯 Strategic Thinking</button>
+                    <button class="card-btn" data-val="Execution & Delivery">⚙️ Execution &amp; Delivery</button>
+                    <button class="card-btn" data-val="Planning & Organization">📝 Planning &amp; Organization</button>
+                    <button class="card-btn" data-val="Creative Problem-Solving">🧩 Creative Problem-Solving</button>
+                    <button class="card-btn" data-val="Networking & Relationship Building">🌐 Networking &amp;
+                        Relationship Building</button>
+                    <button class="card-btn" data-val="Partnership Development">🤝 Partnership Development</button>
+                    <button class="card-btn" data-val="Coaching & Mentorship">📚 Coaching &amp; Mentorship</button>
+                    <button class="card-btn" data-val="Consulting & Advisory Expertise">🧠 Consulting &amp; Advisory
+                        Expertise</button>
+                    <button class="card-btn" data-val="Marketing & Brand Communication">📣 Marketing &amp; Brand
+                        Communication</button>
+                    <button class="card-btn card-btn--other" data-val="Other">Other</button>
+                </div>
+
+                <!-- Conditional: Other market open field -->
+                <div class="conditional-field" id="market-other-field" style="display:none">
+                    <label class="field-label">Please specify</label>
+                    <input type="text" id="f_market_other" class="field-input"
+                        placeholder="Describe your expertise..." />
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 13: COMPANY SIZE ───────────────────── -->
+            <div class="step" data-step="13">
+                <h2 class="step-headline">Is the size of the<br />company important for you?</h2>
+
+                <div class="card-group card-group--single card-group--yesno" id="f_size_important">
+                    <button class="card-btn" data-val="Yes">Yes</button>
+                    <button class="card-btn" data-val="No">No</button>
+                </div>
+
+                <!-- Conditional: company size options -->
+                <div class="conditional-field" id="size-field" style="display:none">
+                    <label class="field-label" style="margin-top: 24px;">What size do you prefer?</label>
+                    <div class="card-group" id="f_size">
+                        <button class="card-btn" data-val="One man">👤 One man</button>
+                        <button class="card-btn" data-val="Start up">🚀 Start up</button>
+                        <button class="card-btn" data-val="Scale up">📈 Scale up</button>
+                        <button class="card-btn" data-val="Mature">🏢 Mature</button>
+                        <button class="card-btn" data-val="International">🌐 International</button>
+                        <button class="card-btn" data-val="Corporate">🏛️ Corporate</button>
+                    </div>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 14: INTERESTS + SPORTS ────────────── -->
+            <div class="step" data-step="14">
+                <h2 class="step-headline">A bit more about <em>you</em> <span class="opt-label">(optional)</span></h2>
+
+                <div class="interests-section">
+                    <h3 class="interests-title">What are your interests?</h3>
+                    <div class="card-group" id="f_interests">
+                        <button class="card-btn" data-val="Travelling">✈️ Travelling</button>
+                        <button class="card-btn" data-val="Food & Drink">🍽️ Food &amp; Drink</button>
+                        <button class="card-btn" data-val="Music">🎵 Music</button>
+                        <button class="card-btn" data-val="Reading">📚 Reading</button>
+                        <button class="card-btn" data-val="Cooking">👨‍🍳 Cooking</button>
+                        <button class="card-btn" data-val="Series">📺 Series</button>
+                        <button class="card-btn" data-val="Games">🎮 Games</button>
+                        <button class="card-btn" data-val="Museums">🏛️ Museums</button>
+                        <button class="card-btn" data-val="Art">🎨 Art</button>
+                        <button class="card-btn" data-val="Dancing">💃 Dancing</button>
+                        <button class="card-btn" data-val="Creativity">🖌️ Creativity</button>
+                        <button class="card-btn card-btn--other" data-val="Other">Other</button>
+                    </div>
+                    <div class="conditional-field" id="interests-other-field" style="display:none">
+                        <input type="text" id="f_interests_other" class="field-input"
+                            placeholder="Describe your interest..." />
+                    </div>
+                </div>
+
+                <div class="interests-section" style="margin-top: 36px;">
+                    <h3 class="interests-title">What sports do you like?</h3>
+                    <div class="card-group" id="f_sports">
+                        <button class="card-btn" data-val="Gym">🏋️ Gym</button>
+                        <button class="card-btn" data-val="Running">🏃 Running</button>
+                        <button class="card-btn" data-val="Athletics">🏅 Athletics</button>
+                        <button class="card-btn" data-val="Tennis">🎾 Tennis</button>
+                        <button class="card-btn" data-val="Basketball">🏀 Basketball</button>
+                        <button class="card-btn" data-val="Bodybuilding">💪 Bodybuilding</button>
+                        <button class="card-btn" data-val="Boxing">🥊 Boxing</button>
+                        <button class="card-btn" data-val="Cardio">🏃 Cardio</button>
+                        <button class="card-btn" data-val="Cycling">🚴 Cycling</button>
+                        <button class="card-btn" data-val="Football">⚽ Football</button>
+                        <button class="card-btn" data-val="HIIT">🤸 HIIT</button>
+                        <button class="card-btn" data-val="Golf">⛳ Golf</button>
+                        <button class="card-btn" data-val="Dancing">💃 Dancing</button>
+                        <button class="card-btn" data-val="Meditation">🧘 Meditation</button>
+                        <button class="card-btn" data-val="Swimming">🏊 Swimming</button>
+                        <button class="card-btn" data-val="Volleyball">🏐 Volleyball</button>
+                        <button class="card-btn" data-val="Yoga">🧘 Yoga</button>
+                        <button class="card-btn" data-val="Extreme sports">🏎️ Extreme sports</button>
+                        <button class="card-btn" data-val="None">🙅 None</button>
+                    </div>
+                </div>
+
+                <div class="step-nav">
+                    <button class="btn-back" onclick="goBack()">←</button>
+                    <button class="btn-next btn-primary" onclick="goNext()">Next →</button>
+                    <button class="btn-skip" onclick="skipStep()">Skip this step</button>
+                </div>
+            </div>
+
+            <!-- ── STEP 15: END ────────────────────────────── -->
+            <div class="step" data-step="15">
+                <div class="end-screen">
+                    <div class="end-icon">✦</div>
+                    <h2 class="step-headline end-headline">Great, this was<br />the <em>survey!</em></h2>
+                    <p class="end-body">We'll use your answers to match you with the right business managers — based on
+                        who you truly are.</p>
+                    <p class="end-body">One last step to complete your Buzbo profile.</p>
+                    <button class="btn-next btn-primary-lg" id="submitBtn" onclick="submitSurvey()">Yesss! Let's go
+                        →</button>
+                </div>
+            </div>
+
+        </div><!-- /survey-wrap -->
+    </main>
+
+    <!-- ── TIPS MODAL ─────────────────────────────────── -->
+    <div class="modal-overlay" id="tipsModal" style="display:none" onclick="closeTips(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeTips()">✕</button>
+            <h3 class="modal-title">💡 Tips for your passion</h3>
+            <ul class="tips-list">
+                <li><strong>(1)</strong> Name a specific activity, like <em>HYROX</em>, instead of just "sport."</li>
+                <li><strong>(2)</strong> Describe what you enjoy about it, such as <em>discovering new dishes, making
+                        meals as healthy as possible, or using minimal ingredients.</em></li>
+                <li><strong>(3)</strong> Include a reason: <em>daily ice baths for my mindset</em> or <em>daily ice
+                        baths for my health.</em></li>
+                <li><strong>(4)</strong> It can be a process: <em>meeting new people, hearing their stories, and helping
+                        them move forward in the future.</em></li>
+            </ul>
         </div>
-      </div>
     </div>
-  </section>
 
-  <!-- SECTION 7: FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="footer-logo">
-            <div class="logo-mark logo-mark--lg">b</div>
-            <span class="logo-text logo-text--lg">Buzbo</span>
-          </div>
-          <p class="footer-tagline">
-            People deserve to be hired<br />for who they are.
-          </p>
-        </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <div class="footer-col-title">Platform</div>
-            <a href="#how" class="footer-link">Hoe het werkt</a>
-            <a href="#waitlist" class="footer-link">Vroege toegang</a>
-            <a href="#manifesto" class="footer-link">Manifesto</a>
-          </div>
-          <div class="footer-col">
-            <div class="footer-col-title">Contact</div>
-            <a href="mailto:hello@buzbo.io" class="footer-link">hello@buzbo.io</a>
-            <a href="https://instagram.com" class="footer-link">Instagram</a>
-            <a href="https://linkedin.com" class="footer-link">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Buzbo · Alle rechten voorbehouden</span>
-        <span>buzbo.io</span>
-      </div>
-    </div>
-  </footer>
+    <!-- ── ERROR TOAST ────────────────────────────────── -->
+    <div class="error-toast" id="errorToast"></div>
 
-  <!-- Feathery SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@feathery/react@latest/umd/index.js"></script>
-  <script src="app.js"></script>
+    <script src="survey.js"></script>
 </body>
+
 </html>
