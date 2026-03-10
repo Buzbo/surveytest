@@ -63,6 +63,11 @@ function showStep(n) {
         next.classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
         updateProgress();
+
+        // Auto-submit to Formspree the moment step 15 is reached
+        if (n === TOTAL_STEPS) {
+            sendToFormspree();
+        }
     }, 200);
 }
 
@@ -396,21 +401,21 @@ function highlight(fieldId) {
     setTimeout(() => el.classList.remove('error'), 2500);
 }
 
-// ── SUBMIT ────────────────────────────────────────────────────────────────────
-async function submitSurvey() {
-    saveStep(15);
+// ── SEND TO FORMSPREE (auto-called on reaching step 15) ──────────────────────
+let formspreeSubmitted = false;
 
-    // Show loading state on button
-    const btn = document.getElementById('submitBtn') || document.querySelector('[onclick="submitSurvey()"]');
-    if (btn) { btn.textContent = 'Submitting...'; btn.disabled = true; }
+async function sendToFormspree() {
+    if (formspreeSubmitted) return; // prevent duplicate sends
+    formspreeSubmitted = true;
 
-    // Send to Formspree
+    // Save all remaining answers before sending
+    for (let i = 1; i <= 14; i++) saveStep(i);
+
     try {
         await fetch('https://formspree.io/f/xojkeeyk', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify({
-                // Top-level fields for easy reading in Formspree dashboard
                 name: answers.name || '',
                 gender: (answers.gender || []).join(', '),
                 age: answers.age || '',
@@ -436,12 +441,14 @@ async function submitSurvey() {
                 submitted_at: new Date().toISOString(),
             })
         });
+        console.log('Formspree: submitted successfully');
     } catch (err) {
-        // Non-blocking — still redirect even if submission fails
         console.warn('Formspree submission failed:', err);
     }
+}
 
-    // Redirect to Tally feedback survey
+// ── SUBMIT BUTTON → redirect to Tally ────────────────────────────────────────
+function submitSurvey() {
     window.location.href = 'https://tally.so/r/gDAJ5P';
 }
 
