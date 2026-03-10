@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buzbo — Hired for who you are</title>
+  <meta name="description" content="Buzbo matched je op wie je écht bent. Niet op je CV. Stop met solliciteren in het vide — laat de juiste manager jou vinden." />
+  <meta property="og:title" content="Buzbo — Hired for who you are" />
+  <meta property="og:description" content="People deserve to be hired for who they are, not just what they've done." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-mark">b</div>
+        <span class="logo-text">Buzbo</span>
+      </a>
+      <div class="nav-right">
+        <a href="#manifesto" class="nav-link">Manifesto</a>
+        <a href="#how" class="nav-link">Hoe het werkt</a>
+        <a href="#waitlist" class="nav-cta-btn">Word lid →</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#manifesto" class="mobile-link" onclick="closeMobile()">Manifesto</a>
+    <a href="#how" class="mobile-link" onclick="closeMobile()">Hoe het werkt</a>
+    <a href="#waitlist" class="mobile-link mobile-cta" onclick="closeMobile()">Word lid →</a>
+  </div>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-orb orb-1"></div>
+    <div class="hero-bg-orb orb-2"></div>
+
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        Hiring, opnieuw uitgevonden
+      </div>
+
+      <h1 class="hero-headline">
+        Je CV vertelt<br />
+        <em>wat</em> je deed.<br />
+        Buzbo laat zien<br />
+        <em>wie</em> je bent.
+      </h1>
+
+      <p class="hero-sub">
+        Stop met solliciteren in het vide. Laat de juiste manager jou vinden —
+        op basis van wie je écht bent.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#waitlist" class="btn-primary">Claim je plek →</a>
+        <span class="hero-social-proof">
+          <span class="avatars">
+            <span class="av av1">J</span>
+            <span class="av av2">M</span>
+            <span class="av av3">S</span>
+          </span>
+          <span>2.400+ mensen gaan je voor</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2: STAT BANNER -->
+  <section class="stat-banner">
+    <div class="stat-banner-inner">
+      <div class="stat-item">
+        <span class="stat-number">89%</span>
+        <span class="stat-label">van slechte hires door soft skills mismatch</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">72%</span>
+        <span class="stat-label">van professionals voelt zich verkeerd beoordeeld</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">1 op 3</span>
+        <span class="stat-label">ideale kandidaten worden weggefiltered door ATS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MANIFESTO -->
+  <section class="manifesto" id="manifesto">
+    <div class="manifesto-inner">
+      <div class="manifesto-label">✦ Manifest</div>
+      <div class="manifesto-lines">
+        <p class="manifesto-line" data-delay="0">HR filtert op keywords.</p>
+        <p class="manifesto-line" data-delay="100">Managers huren op cultuur.</p>
+        <p class="manifesto-line" data-delay="200">Niemand verbindt de twee.</p>
+        <p class="manifesto-line manifesto-line--accent" data-delay="350">Tot nu.</p>
+      </div>
+      <p class="manifesto-body">
+        Buzbo is gebouwd voor mensen die moe zijn van het schrijven van
+        motivatiebrieven voor banen waar ze perfect voor zijn — maar toch
+        door een algoritme worden buitengesloten. Je passie verdient een
+        betere match.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 4: HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="how-inner">
+      <div class="how-label">Hoe het werkt</div>
+      <h2 class="how-headline">Drie stappen.<br />Eén match.</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3 class="step-title">Bouw je profiel</h3>
+            <p class="step-body">
+              Geen saai CV. Jij vertelt wie je bent: je waarden, je
+              werkstijl, wat jou drijft. Authentiek en eerlijk.
+            </p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3 class="step-title">Buzbo matcht</h3>
+            <p class="step-body">
+              Ons algoritme koppelt jou aan managers die zoeken
+              naar precies wie jij bent — niet wat je ooit op papier
+              hebt gezet.
+            </p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3 class="step-title">Maak verbinding</h3>
+            <p class="step-body">
+              De manager neemt contact op. Jij beslist. Direct,
+              menselijk en zonder inbox-chaos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: BRAND VOICE SPLIT -->
+  <section class="voice-split">
+    <div class="voice-left">
+      <p class="voice-quote">
+        "Stop performing.<br />
+        <strong>Start connecting.</strong>"
+      </p>
+      <div class="voice-tags">
+        <span class="voice-tag">Direct</span>
+        <span class="voice-tag">Menselijk</span>
+        <span class="voice-tag">Zelfverzekerd</span>
+        <span class="voice-tag">Empowerend</span>
+      </div>
+    </div>
+    <div class="voice-right">
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "Ik had 47 afwijzingen in 6 maanden. Buzbo zorgde dat een manager mij
+          benaderde binnen een week — voor een rol ik niet eens had durven
+          solliciteren."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-av">L</div>
+          <div>
+            <div class="author-name">Lotte V.</div>
+            <div class="author-title">UX Designer · Amsterdam</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          "Eindelijk een platform dat begrijpt dat ik meer ben dan mijn
+          werkervaring. Buzbo toonde wie ik écht ben."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-av">R</div>
+          <div>
+            <div class="author-name">Remi K.</div>
+            <div class="author-title">Product Lead · Rotterdam</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: WAITLIST FORM -->
+  <section class="waitlist" id="waitlist">
+    <div class="waitlist-inner">
+      <div class="waitlist-left">
+        <div class="waitlist-label">✦ Vroege toegang</div>
+        <h2 class="waitlist-headline">
+          De baan<br />vond jou.<br />
+          <em>Niet andersom.</em>
+        </h2>
+        <p class="waitlist-sub">
+          Wees er als eerste bij. Buzbo lanceert binnenkort — en de eerste
+          leden bepalen mee hoe het platform eruitziet.
+        </p>
+        <div class="waitlist-perks">
+          <div class="perk">
+            <span class="perk-icon">✓</span>
+            <span>Gratis voor professionals, altijd</span>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">✓</span>
+            <span>Geen motivatiebrieven meer</span>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">✓</span>
+            <span>Jij bepaalt wat je deelt</span>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">✓</span>
+            <span>Early members shapen het product</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="waitlist-right">
+        <div class="form-card">
+          <div class="form-card-header">
+            <div class="form-card-tag">Claim je plek</div>
+            <p class="form-card-sub">Vul je gegevens in en we nemen contact met je op</p>
+          </div>
+          <!-- Feathery Form -->
+          <div id="feathery-container"></div>
+          <p class="form-privacy">
+            🔒 Je gegevens worden nooit gedeeld met derden.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-mark logo-mark--lg">b</div>
+            <span class="logo-text logo-text--lg">Buzbo</span>
+          </div>
+          <p class="footer-tagline">
+            People deserve to be hired<br />for who they are.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="footer-col-title">Platform</div>
+            <a href="#how" class="footer-link">Hoe het werkt</a>
+            <a href="#waitlist" class="footer-link">Vroege toegang</a>
+            <a href="#manifesto" class="footer-link">Manifesto</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Contact</div>
+            <a href="mailto:hello@buzbo.io" class="footer-link">hello@buzbo.io</a>
+            <a href="https://instagram.com" class="footer-link">Instagram</a>
+            <a href="https://linkedin.com" class="footer-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Buzbo · Alle rechten voorbehouden</span>
+        <span>buzbo.io</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Feathery SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@feathery/react@latest/umd/index.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
